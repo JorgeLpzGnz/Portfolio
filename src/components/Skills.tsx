@@ -1,3 +1,4 @@
+import { useLanguage } from '@/context/LanguageContext';
 import { Code2, Blocks, Palette } from 'lucide-react';
 
 const skills = {
@@ -8,15 +9,18 @@ const skills = {
 
 const Skills = () => {
 
+    const { t } = useLanguage();
+    
+
     return (
         <section id="skills" className="py-20 px-6 bg-slate-800/30">
             <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold mb-12 text-center">Stack Tecnológico</h2>
+            <h2 className="text-4xl font-bold mb-12 text-center">{t('skills.title')}</h2>
             <div className="grid md:grid-cols-3 gap-6">
                 <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-blue-500/50 transition-colors">
                 <div className="flex items-center gap-3 mb-4">
                     <Code2 className="text-blue-400" size={28} />
-                    <h3 className="text-xl font-semibold">Front-end</h3>
+                    <h3 className="text-xl font-semibold">{t('skills.frontend')}</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                     {skills.frontend.map(skill => (
@@ -30,7 +34,7 @@ const Skills = () => {
                 <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500/50 transition-colors">
                 <div className="flex items-center gap-3 mb-4">
                     <Blocks className="text-purple-400" size={28} />
-                    <h3 className="text-xl font-semibold">Web3 & Blockchain</h3>
+                    <h3 className="text-xl font-semibold">{t('skills.web3')}</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                     {skills.web3.map(skill => (
@@ -44,7 +48,7 @@ const Skills = () => {
                 <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-pink-500/50 transition-colors">
                 <div className="flex items-center gap-3 mb-4">
                     <Palette className="text-pink-400" size={28} />
-                    <h3 className="text-xl font-semibold">Herramientas</h3>
+                    <h3 className="text-xl font-semibold">{t('skills.tools')}</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                     {skills.tools.map(skill => (

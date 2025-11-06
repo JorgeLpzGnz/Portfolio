@@ -1,67 +1,75 @@
+// components/Experience.tsx
+'use client';
 
-const experience = [
-    {
-      role: 'Front-end Developer',
-      company: 'Ciento Por Ciento Comunicaciones',
-      period: 'Jul 2024 - Presente',
-      location: 'Bogotá, Colombia',
-      achievements: [
-        'Desarrollo de aplicaciones web con React.js y Figma',
-        'Mantenimiento y mejoras de apps existentes',
-        'Colaboración con equipos de diseño para interfaces responsivas'
-      ]
-    },
-    {
-      role: 'Web3 & Front-end Developer',
-      company: 'The Metalorian DAO',
-      period: 'Ago 2022 - 2023',
-      location: 'Bucaramanga, Colombia',
-      achievements: [
-        'Desarrollo de dApps en entorno Web 3.0',
-        'Implementación de smart contracts con Solidity',
-        'Creación de 3 productos blockchain exitosos'
-      ]
-    },
-    {
-      role: 'Front-end Developer',
-      company: 'XVORTEX',
-      period: 'Feb 2022 - Sep 2022',
-      location: 'Bucaramanga, Colombia',
-      achievements: [
-        'Desarrollo de interfaces enfocadas en UX',
-        'Code reviews y procesos de mejora continua',
-        'Optimización basada en feedback de usuarios'
-      ]
-    }
-  ];
+import React from 'react';
+import { useLanguage } from '@/context/LanguageContext';
 
-const Experience = () => 
-    <section id="experience" className="py-20 px-6 bg-slate-800/30">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Experiencia</h2>
-          <div className="space-y-8">
-            {experience.map((exp, idx) => (
-              <div key={idx} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-blue-400">{exp.role}</h3>
-                    <p className="text-lg text-gray-300">{exp.company}</p>
-                    <p className="text-sm text-gray-400">{exp.location}</p>
-                  </div>
-                  <span className="text-purple-400 font-semibold mt-2 md:mt-0">{exp.period}</span>
+interface ExperienceItem {
+    roleKey: string;
+    companyKey: string;
+    periodKey: string;
+    locationKey: string;
+    achievementKeys: string[];
+}
+
+const Experience: React.FC = () => {
+
+    const { t } = useLanguage();
+
+    const experience: ExperienceItem[] = [
+        {
+            roleKey: 'job1.role',
+            companyKey: 'job1.company',
+            periodKey: 'job1.period',
+            locationKey: 'job1.location',
+            achievementKeys: ['job1.achievement1', 'job1.achievement2', 'job1.achievement3']
+        },
+        {
+            roleKey: 'job2.role',
+            companyKey: 'job2.company',
+            periodKey: 'job2.period',
+            locationKey: 'job2.location',
+            achievementKeys: ['job2.achievement1', 'job2.achievement2', 'job2.achievement3']
+        },
+        {
+            roleKey: 'job3.role',
+            companyKey: 'job3.company',
+            periodKey: 'job3.period',
+            locationKey: 'job3.location',
+            achievementKeys: ['job3.achievement1', 'job3.achievement2', 'job3.achievement3']
+        }
+    ];
+
+    return (
+        <section id="experience" className="py-20 px-6 bg-slate-800/30">
+            <div className="max-w-4xl mx-auto">
+                <h2 className="text-4xl font-bold mb-12 text-center">{t('experience.title')}</h2>
+                <div className="space-y-8">
+                    {experience.map((exp, idx) => (
+                        <div key={idx} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-blue-500/50 transition-colors">
+                            <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                                <div>
+                                    <h3 className="text-2xl font-bold text-blue-400">{t(exp.roleKey)}</h3>
+                                    <p className="text-lg text-gray-300">{t(exp.companyKey)}</p>
+                                    <p className="text-sm text-gray-400">{t(exp.locationKey)}</p>
+                                </div>
+                                <span className="text-purple-400 font-semibold mt-2 md:mt-0">{t(exp.periodKey)}</span>
+                            </div>
+                            <ul className="space-y-2">
+                                {exp.achievementKeys.map((key, i) => (
+                                    <li key={i} className="flex items-start gap-3 text-gray-300">
+                                        <span className="text-blue-400 mt-1">▹</span>
+                                        <span>{t(key)}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
                 </div>
-                <ul className="space-y-2">
-                  {exp.achievements.map((achievement, i) => (
-                    <li key={i} className="flex items-start gap-3 text-gray-300">
-                      <span className="text-blue-400 mt-1">▹</span>
-                      <span>{achievement}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-    </section>
+            </div>
+        </section>
+    );
+    
+};
 
 export default Experience
