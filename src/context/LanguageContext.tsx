@@ -119,7 +119,7 @@ const translations: Record<Language, Record<string, string>> = {
         // Job 2
         'job2.role': 'Web3 & Front-end Developer',
         'job2.company': 'The Metalorian DAO',
-        'job2.period': 'Ago 2022 - 2023',
+        'job2.period': 'Ago 2022 - Mayo 2023',
         'job2.location': 'Bucaramanga, Colombia',
         'job2.achievement1': 'Desarrollo de dApps en entorno Web 3.0',
         'job2.achievement2': 'Implementación de smart contracts con Solidity',
@@ -128,7 +128,7 @@ const translations: Record<Language, Record<string, string>> = {
         // Job 3
         'job3.role': 'Front-end Developer',
         'job3.company': 'XVORTEX',
-        'job3.period': 'Feb 2022 - Sep 2022',
+        'job3.period': 'Feb 2022 - Jul 2022',
         'job3.location': 'Bucaramanga, Colombia',
         'job3.achievement1': 'Desarrollo de interfaces enfocadas en UX',
         'job3.achievement2': 'Code reviews y procesos de mejora continua',
@@ -222,7 +222,7 @@ const translations: Record<Language, Record<string, string>> = {
         // Job 2
         'job2.role': 'Web3 & Front-end Developer',
         'job2.company': 'The Metalorian DAO',
-        'job2.period': 'Aug 2022 - 2023',
+        'job2.period': 'Aug 2022 - May 2023',
         'job2.location': 'Bucaramanga, Colombia',
         'job2.achievement1': 'dApps development in Web 3.0 environment',
         'job2.achievement2': 'Smart contract implementation with Solidity',
@@ -231,7 +231,7 @@ const translations: Record<Language, Record<string, string>> = {
         // Job 3
         'job3.role': 'Front-end Developer',
         'job3.company': 'XVORTEX',
-        'job3.period': 'Feb 2022 - Sep 2022',
+        'job3.period': 'Feb 2022 - July 2022',
         'job3.location': 'Bucaramanga, Colombia',
         'job3.achievement1': 'UX-focused interface development',
         'job3.achievement2': 'Code reviews and continuous improvement processes',
