@@ -46,7 +46,7 @@ export function ClientLayout({ children }: ClientLayoutProps) {
     <LanguageProvider>
       {/* Particle Background - Capa inferior */}
       {/* <ParticleBackground /> */}
-      <WaveBackground />
+      <WaveBackground/>
       
       {/* Content wrapper - Capa superior */}
       <div className="min-h-screen bg-transparent text-white relative" style={{ position: 'relative', zIndex: 10 }}>

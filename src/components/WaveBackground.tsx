@@ -151,10 +151,11 @@ export const WaveBackground: React.FC = () => {
         inset: 0,
         width: '100%',
         height: '100%',
-        zIndex: 100,
+        zIndex: 0,
         pointerEvents: 'none',
         display: 'block',
       }}
+      className='bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'
     />
   );
 };
