@@ -1,7 +1,7 @@
 // app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
-import ClientLayout from './ClientLayout';
+import {ClientLayout} from './ClientLayout';
 
 export const metadata: Metadata = {
     title: "Jorge López - Web3 & Front-end Developer",
